@@ -1,0 +1,18 @@
+{
+  "name": "Avahi mDNS Reflector",
+  "version": "1.0",
+  "slug": "avahi_reflector",
+  "description": "Reflect mDNS traffic between interfaces (e.g., LAN and VPN).",
+  "startup": "system",
+  "boot": "auto",
+  "arch": ["aarch64", "armv7", "armhf", "amd64", "i386"],
+  "options": {
+    "reflector_mode": true
+  },
+  "schema": {
+    "reflector_mode": "bool"
+  },
+  "ports": {
+    "5353/udp": 5353
+  }
+}
