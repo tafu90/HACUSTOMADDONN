@@ -5,7 +5,7 @@
   "description": "Fakes mDNS advertisements (e.g., Synology) to trick local devices.",
   "startup": "system",
   "boot": "auto",
-  "arch": ["armv7", "aarch64"],
+  "arch": ["aarch64", "armv7", "armhf", "amd64", "i386"],
   "host_network": true,
   "privileged": ["NET_ADMIN"],
   "options": {},
