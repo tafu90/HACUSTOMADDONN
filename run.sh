@@ -1,3 +1,8 @@
 #!/bin/bash
-echo "Starting Avahi Daemon"
-avahi-daemon --daemonize --enable-reflector=yes
+
+# Fake Synology mDNS broadcast
+avahi-publish -s "Maina" _http._tcp 5000 &
+avahi-publish -s "Maina" _smb._tcp 445 &
+
+# Keep container alive
+tail -f /dev/null
