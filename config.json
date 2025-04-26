@@ -1,18 +1,13 @@
 {
-  "name": "Avahi mDNS Reflector",
+  "name": "Fake mDNS Publisher",
   "version": "1.0",
-  "slug": "avahi_reflector",
-  "description": "Reflect mDNS traffic between interfaces (e.g., LAN and VPN).",
+  "slug": "fake_mdns",
+  "description": "Fakes mDNS advertisements (e.g., Synology) to trick local devices.",
   "startup": "system",
   "boot": "auto",
-  "arch": ["aarch64", "armv7", "armhf", "amd64", "i386"],
-  "options": {
-    "reflector_mode": true
-  },
-  "schema": {
-    "reflector_mode": "bool"
-  },
-  "ports": {
-    "5353/udp": 5353
-  }
+  "arch": ["armv7", "aarch64"],
+  "host_network": true,
+  "privileged": ["NET_ADMIN"],
+  "options": {},
+  "schema": {}
 }
