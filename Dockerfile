@@ -1,10 +1,13 @@
-# Dockerfile
-FROM ubuntu:latest
+# Dockerfile for Avahi Reflector Add-on
+FROM ghcr.io/home-assistant/amd64-base:3.19
 
-LABEL maintainer="your_email@example.com"
+LABEL maintainer="you@example.com"
 
-RUN apt-get update && apt-get install -y avahi-daemon iputils-ping
+# Install Avahi daemon
+RUN apk add --no-cache avahi avahi-utils dbus
 
-EXPOSE 5353/udp
+# Copy our startup script
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
 
-CMD ["avahi-daemon", "--no-daemon", "--enable-reflector"]
+CMD ["/run.sh"]
