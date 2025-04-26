@@ -1,5 +1,5 @@
 # Dockerfile for Avahi Reflector Add-on
-FROM ghcr.io/home-assistant/amd64-base:3.19
+FROM ubuntu:latest
 
 LABEL maintainer="you@example.com"
 
