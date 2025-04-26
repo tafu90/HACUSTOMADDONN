@@ -1,6 +1,6 @@
 {
   "name": "Fake mDNS Publisher",
-  "version": "1.0",
+  "version": "1.1",
   "slug": "fake_mdns",
   "description": "Fakes mDNS advertisements (e.g., Synology) to trick local devices.",
   "startup": "system",
