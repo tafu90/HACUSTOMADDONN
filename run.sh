@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/usr/sbin/avahi-daemon --no-chroot &
+
 # Fake Synology mDNS broadcast
 avahi-publish -s "Maina" _http._tcp 5000 &
 avahi-publish -s "Maina" _smb._tcp 445 &
